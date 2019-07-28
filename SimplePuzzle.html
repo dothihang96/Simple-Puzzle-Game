@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Simple Puzzle</title>
+    <style>
+        .piece {
+            width: 102px;
+            height: 102px;
+            padding: 2px;
+            background-color: rgb(243, 239, 239);
+        }
+
+        .picture {
+            width: 820px;
+            height: 820px;
+            border: 2px black solid;
+        }
+
+        .the-container {
+            width: 1500px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 440px;
+            height: 440px;
+            border: 2px black solid;
+        }
+
+        #description {
+            width: 470px;
+            border: 1px black solid;
+            padding: 8px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="the-container mt-3 ">
+        <h1 class="mb-3">Simple Puzzle <span class="ml-4"><button class="btn btn-info" id="start">Shuffle</button></span></h1>
+        <div class="row">
+            <div class="row picture">
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece1" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece2" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece3" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece4" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece5" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece6" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece7" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece8" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece9" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece10" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece11" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece12" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece13" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece14" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece15" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece " ondrop="drop(event)">
+                    <canvas id="piece16" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece17" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece18" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece19" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece20" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece21" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece22" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece23" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece24" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece25" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece26" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece27" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece28" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece29" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece30" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece31" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece32" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece33" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece34" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece35" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece36" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece37" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece38" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece39" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece40" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece41" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece42" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece43" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece44" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece45" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece46" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece47" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece48" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece49" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece50" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece51" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece52" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece53" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece54" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece55" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece56" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece57" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece58" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece59" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece60" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece61" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece62" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece63" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+                <div class="piece" ondrop="drop(event)">
+                    <canvas id="piece64" draggable="true" width="100" height="100" ondragstart="drag(event)"></canvas>
+                </div>
+            </div>
+            <div class="mx-auto">
+
+                <h3>Description :</h3>
+                <p id="description">Have you ever played puzzle games? Some kinds of puzzle games, the rules is so
+                    complicated that
+                    your movement steps are limited and it is difficult to finish one round. For simplicity, our puzzle
+                    game is designed with the
+                    simple rule that you just drag pieces and drop them any position you want to complete game. Click
+                    "Shuffle" to shuffle pieces and start
+                    . Refresh your page to get new picture. Have fun!
+                </p>
+
+                <div>
+                    <h3>The Original Picture</h3>
+                    <img src="" alt="picture">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+        integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        var img = new Image();
+        var img_src = "http://lorempixel.com/800/800/cats"
+        img.onload = cutImage;
+        img.src = img_src;
+        $("img").attr("src", img_src);
+        var number = 1;
+        var id_array = new Array();
+        for (var i = 1; i <= 64; i++) {
+            id_array.push('piece' + i);
+        }
+        console.log(id_array);
+
+        function cutImage() {
+            for (var x = 0; x < 8; ++x) {
+                for (var y = 0; y < 8; ++y) {
+                    var context = document.getElementById('piece' + number).getContext('2d');
+                    context.drawImage(img, y * 100, x * 100, 100, 100, 0, 0, 100, 100);
+
+                    number++;
+                }
+            }
+        }
+
+        var start = document.getElementById("start");
+        start.onclick = function () {
+            shuffle();
+        };
+        function shuffle() {
+            $(".picture").each(function () {
+                var divs = $(this).find('div');
+                for (var i = 0; i < divs.length; i++) { divs[i].remove(); }
+
+                var current_index = divs.length;
+                var tempi;
+                var tem_rd;
+                while (current_index != 0) {
+                    var rd = Math.floor(Math.random() * (current_index));
+                    current_index--;
+                    tempi = divs[current_index];
+                    tem_rd = divs[rd];
+                    divs[current_index] = tem_rd;
+                    divs[rd] = tempi;
+                }
+                for (var i = 0; i < divs.length; i++) $(divs[i]).appendTo(this);
+            })
+        }
+
+
+        $(".piece").bind("dragover", function () {
+            // prevent default to allow drop
+            $(this).preventDefault();
+        }, false);
+
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("get-one", ev.target.id);
+        }
+
+        var cur_id_array = new Array();
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = document.getElementById(ev.dataTransfer.getData("get-one"));
+            var dataParent = data.parentNode;
+            var exchange_one = ev.currentTarget.firstElementChild;
+
+            ev.currentTarget.replaceChild(data, exchange_one);
+            dataParent.appendChild(exchange_one);
+
+
+            // try {
+            //     $(".picture div canvas").each(function () {
+            //         var cur_id = $(this).attr("id");
+            //         cur_id_array.push(cur_id);
+            //     });
+            // }
+            // finally{
+            //     console.log(cur_id_array);
+            // }
+        }
+
+
+        
+    </script>
+</body>
+
+</html>
